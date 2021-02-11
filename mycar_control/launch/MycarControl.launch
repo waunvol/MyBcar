@@ -1,9 +1,5 @@
 <launch>
-    <!-- <node
-    name="setup"
-    pkg="mycar_control"
-    type="setup"
-    output="screen" /> -->
+    <!-- load PID default settings -->
     <rosparam file="$(find mycar_control)/config/PID.yaml" command="load" />
 
     <node
