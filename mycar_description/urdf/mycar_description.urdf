@@ -1,0 +1,149 @@
+<robot
+  name="mycar_description">
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 -0.000646422945483935 0.0455884253598942"
+        rpy="0 0 0" />
+      <mass
+        value="0.0365474725376583" />
+      <inertia
+        ixx="3.26329834997654E-05"
+        ixy="-1.88550033460057E-21"
+        ixz="2.62801861772126E-21"
+        iyy="3.48332159382441E-05"
+        iyz="6.83951771998764E-07"
+        izz="8.75024005906324E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mycar_description/meshes/body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mycar_description/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_wheel">
+    <inertial>
+      <origin
+        xyz="0.010498789346247 1.38777878078145E-17 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0162184720741573" />
+      <inertia
+        ixx="3.54374105694189E-06"
+        ixy="-2.47483152176292E-22"
+        ixz="7.10467694681252E-23"
+        iyy="2.06933678659425E-06"
+        iyz="-7.16634449861902E-39"
+        izz="2.06933678659425E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mycar_description/meshes/R_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mycar_description/meshes/R_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_Rwheel"
+    type="continuous">
+    <origin
+      xyz="0.0295 0 0.0015"
+      rpy="0 4.8186763221578E-17 0" />
+    <parent
+      link="body" />
+    <child
+      link="R_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="L_wheel">
+    <inertial>
+      <origin
+        xyz="-0.010498789346247 0 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0162184720741573" />
+      <inertia
+        ixx="3.54374105694189E-06"
+        ixy="2.98844999959475E-22"
+        ixz="1.58659667235976E-38"
+        iyy="2.06933678659425E-06"
+        iyz="1.17549435082229E-38"
+        izz="2.06933678659425E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mycar_description/meshes/L_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mycar_description/meshes/L_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_Lwheel"
+    type="continuous">
+    <origin
+      xyz="-0.0295 0 0.0015"
+      rpy="-2.89120579329468E-17 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="L_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>

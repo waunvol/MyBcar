@@ -1,0 +1,26 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find mycar_gazebo)/config/mycar_controller.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" args="joint_state_controller 
+                        Rwheel_controller
+                        Lwheel_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+  </node>
+
+  <node pkg="joint_state_publisher"
+    type="joint_state_publisher"
+    name="joint_state_publisher" 
+    >
+    <param name="rate" value="50" />
+</node>
+
+
+
+</launch>

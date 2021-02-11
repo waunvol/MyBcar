@@ -1,0 +1,19 @@
+<launch>
+    <!-- <node
+    name="setup"
+    pkg="mycar_control"
+    type="setup"
+    output="screen" /> -->
+    <rosparam file="$(find mycar_control)/config/PID.yaml" command="load" />
+
+    <node
+    name="MasterControl"
+    pkg="mycar_control"
+    type="MasterControl"
+    output="screen" />
+
+
+
+
+
+</launch>

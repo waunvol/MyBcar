@@ -1,0 +1,19 @@
+<launch>
+    <arg name="paused" default="true"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+    <param name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find mycar_description)/urdf/xacro/mycar_description.xacro'" />
+    <node name="urdf_spawner" pkg="gazebo_ros"  type="spawn_model" respawn="false" output="screen"
+    args="-urdf -model mycar -param robot_description"/>
+
+    <!-- launch RVIZ -->
+
+    <include file="$(find mycar_gazebo)/launch/mycar_controller.launch" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mycar_gazebo)/mycar_V1.rviz"/>
+
+</launch>

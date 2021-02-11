@@ -1,0 +1,7 @@
+<launch>
+
+    <include file="$(find mycar_gazebo)/launch/mycar_gazebo.launch" />
+
+    <include file="$(find mycar_control)/launch/MycarControl.launch" />
+
+</launch>

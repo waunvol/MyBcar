@@ -1,0 +1,9 @@
+#default PID settings
+coefficient:
+  A_s: 7
+  B_s: 0.6
+
+  A_r: 0.2 
+  B_r: 0.001
+
+  A_t: 1
