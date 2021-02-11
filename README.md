@@ -1,5 +1,5 @@
 # MyBcar
-## A self-balancing vehicle simulation by GAZEBO.
+## A self-balancing vehicle simulation by **GAZEBO**.
 ***
   Enter `roslaunch mycar_control Mycar.launch` to launch the model with control program.
   
