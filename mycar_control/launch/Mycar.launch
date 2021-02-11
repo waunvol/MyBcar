@@ -1,7 +1,7 @@
 <launch>
-
+    <!--launch model and connect with controller-->
     <include file="$(find mycar_gazebo)/launch/mycar_gazebo.launch" />
-
+    <!--self-balacning algorithm-->
     <include file="$(find mycar_control)/launch/MycarControl.launch" />
 
 </launch>
