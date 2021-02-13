@@ -1,8 +1,8 @@
-#This package (c + +) can send the specified topic by reading the keyboard keys "W", "a", "s" and "d". This package can be used to simply control the robot movement
+# This package (c + +) can send the specified topic by reading the keyboard keys "W", "a", "s" and "d". This package can be used to simply control the robot movement
 
 Topic name is ` CMD_ The data type is' geometry '_ Msgs:: twist ', which controls the * * speed of the robot**
 
-#1. Compile and install
+# 1. Compile and install
 
 Clone this warehouse to ` catkin '_ After WS / SRC, return to catkin_ Ws' working path, execute the compile command
 
@@ -11,11 +11,11 @@ Clone this warehouse to ` catkin '_ After WS / SRC, return to catkin_ Ws' workin
 
 Note: if it prompts that the 'boost' Library cannot be found and needs to be installed. `sudo apt-get install boost`
 
-#2. Operation
+# 2. Operation
 
 Run: ` rosrun keyboard_ node`
 
-#3. Use
+# 3. Use
 
 Select the terminal of the running node with the mouse and press the "W", "a", "s" and "d" keys to control the forward and backward left and right movement (Shift + W "will accelerate)
 
@@ -24,7 +24,7 @@ Select the terminal of the running node with the mouse and press the "W", "a", "
 
 **If you want the robot to move all the time, you can send the command circularly by pressing the key, and if you release it, the robot will stop**
 
-#4. Code mechanism
+# 4. Code mechanism
 
 **When the key is pressed, the topic will be published. When the key is not pressed, the topic will not be published**
 
